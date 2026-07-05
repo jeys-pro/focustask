@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>FocusTask</title>
+</head>
+<body>
+
+  <h1>Mes tâches</h1>
+
+  <button onclick="enableNotifications()">
+    Activer notifications
+  </button>
+
+  <button onclick="logout()">
+    Logout
+  </button>
+
+  <hr>
+
+  <h2>Créer tâche</h2>
+
+  <input id="title" placeholder="titre" />
+  <input id="description" placeholder="description" />
+  <input id="deadline" type="date" />
+
+  <select id="priority">
+    <option value="low">Low</option>
+    <option value="medium" selected>Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  <button onclick="createTask()">
+    Créer
+  </button>
+
+  <hr>
+
+  <h2>Liste des tâches</h2>
+  <div id="tasks"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
